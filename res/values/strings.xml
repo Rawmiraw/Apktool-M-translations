@@ -15,6 +15,9 @@
 	<string name="lock_icon" translatable="false">&#xec61;</string>
 	<string name="block_icon" translatable="false">&#xec41;</string>
     <string name="list_icon" translatable="false">&#xec6f;</string>
+    <string name="clock_icon" translatable="false">&#xec4e;</string>
+    <string name="prev_icon" translatable="false">◀</string>
+    <string name="next_icon" translatable="false">▶</string>
 	<string name="base64">Base64: %s</string>
 	<string name="base64_sign">Base64 of signature: %s</string>
 	<string name="base64_cert">Base64 of certificate: %s</string>
@@ -80,7 +83,12 @@
     <string name="end">End</string>
     <string name="framework">Framework</string>
     <string name="syntax">Syntax</string>
+    <string name="parameters">Parameters: %s</string>
+    <string name="storages_info">Memory information</string>
+    <string name="storage_info">Total %1$s. Used %2$s. Free %3$s.</string>
     <string name="exclude_path">Exclude from search</string>
+    <string name="comp_stats">Compilation statistics</string>
+    <string name="comp_stats_info">Success: %1$s\nError: %2$s\nTotal: %3$s</string>
     <string name="base_not_def">Base file not defined, select manually!</string>
     <string name="base_not_found">Base file not found, exit!</string>
     <string name="copy_sign">Copy signature from another apk</string>
@@ -92,6 +100,14 @@
     <string name="dex_decompile_info">This option decompiles all dex files that are in the root of the apk, but leaves dex files in subfolders untouched.</string>
     <string name="dex_decompile_info2">This option decompiles all dex files into apk, both those located in the root and those located in subfolders.</string>
     <string name="delete_orig">Delete original</string>
+    <string name="compare_apk">Compare content</string>
+    <string name="compare_apk_mod">Modified files</string>
+    <string name="compare_apk_unmod">Unmodified files</string>
+    <string name="compare_apk_add">Added files</string>
+    <string name="compare_apk_del">Deleted files</string>
+    <string name="compare_apk_mov">Moved files</string>
+    <string name="compare_apk_mess">Compare the contents of \"%1$s\" with the contents of \"%2$s\"</string>
+    <string name="only_diff">Only differences</string>
     <string name="split_dex">Split dex</string>
     <string name="split_dex_label">Split:</string>
     <string name="split_dex_cnd">Number of dex:</string>
@@ -118,7 +134,9 @@
 	<string name="reset_fab">Reset floating button position?</string>
 	<string name="kill_sign">Remove signature verification</string>
     <string name="kill_sign_rand">Random class name</string>
+    <string name="kill_sign_rand_apk">Random file name</string>
 	<string name="kill_sign_advanced">Improved method</string>
+    <string name="kill_sign_installer">Installer name spoofing</string>
 	<string name="kill_sign_orig">Add original apk to check integrity</string>
 	<string name="kill_sign_exists">The hook has already been added</string>
 	<string name="kill_sign_by_orig">Take a signature from the specified original</string>
@@ -168,6 +186,7 @@
 	<string name="close_project">Close project</string>
 	<string name="failed_openset">Failed to open settings!</string>
 	<string name="linel">line</string>
+    <string name="linef">line %d</string>
 	<string name="confirmb">Compile project \"%s\"?</string>
 	<string name="make_home">Make as home dir</string>
 	<string name="check_hash">Check hash</string>
@@ -187,6 +206,7 @@
 	<string name="if_exists">If the file exists</string>
 	<string name="create_list">Create a list</string>
 	<string name="folders_rec">folders recursively</string>
+    <string name="files_rec">files recursively</string>
 	<string name="relative_path">relative path</string>
 	<string name="play">Play</string>
 	<string name="pause">Pause</string>
@@ -345,6 +365,8 @@
 	<string name="moving_file">Moving \"%s\"...</string>
 	<string name="copy_here">Copy \"%s\" here?</string>
 	<string name="move_here">Move \"%s\" here?</string>
+    <string name="copy_tt_conf">Copy \"%s\" to another tab?</string>
+	<string name="move_tt_conf">Move \"%s\" to another tab?</string>
 	<string name="file_not_found">File \"%s\" not found!</string>
 	<string name="copy_path">Copy Path</string>
 	<string name="build_copy_file">Copying \"%1$s\"...</string>
@@ -731,6 +753,8 @@
 	<string name="keep_broken_summary">Use this if there was an error when decompiling resources, but you still want to decompile them, even with errors</string>
     <string name="editor_rem_tabs">Remember open files</string>
 	<string name="editor_rem_tabs_summary">Open the last opened files in the editor when the application starts</string>
+    <string name="editor_auto_search">Open search automatically</string>
+	<string name="editor_auto_search_summary">Open search when opening from file search results</string>
     <string name="detect_protect">Check application protection</string>
 	<string name="detect_protect_summary">Trying to determine the protection of the apk file in the details dialog</string>
     <string name="ds_display">Date and size display</string>
@@ -756,6 +780,14 @@
 	<string name="save_sign_data_summary">Save signature data during actions with apk, if the signature option \"Do not sign\" is selected</string>
     <string name="mapp_inLocation_summary">Ask for application installation location when installing via session</string>
     <string name="mapp_inLocation_info">To install on external storage, the storage must be mounted in internal memory expansion mode!</string>
+    <string name="sign_priority">Signature priority V1</string>
+	<string name="sign_priority_summary">Signature priority V1 when verifying and retrieving signature data</string>
+    <string name="hl_time">Folder highlight time</string>
+	<string name="hl_time_summary">Folder highlighting time when going back, in milliseconds</string>
+    <string name="user_cache">Selecting a cache folder</string>
+	<string name="user_cache_summary">Select storage for temporary files folder</string>
+    <string name="snowfall">Enable snowfall</string>
+	<string name="snowfall_summary">Snowfall in the program for the New Year holidays</string>
     <string name="shell_cmd">Shell command</string>
 	<string name="shell_cmd_summary">A shell for running shell scripts</string>
     <string name="shell_cmd_root">Root command</string>
@@ -864,6 +896,11 @@
 	<string name="mtr_google_web">Google Web</string>
 	<string name="mtr_bing">Bing</string>
 	<string name="mtr_yandex">Yandex</string>
+    <string name="mtr_deepl">DeepL</string>
+    <string name="mtr_deepl_warn">Too many requests, your IP address is temporarily blocked DeepL! Please wait a while and try again!</string>
+    <string name="mtr_deepl_key_warn">The number of requests to DeepL API for your key has been exhausted!</string>
+    <string name="mtr_deepl_key">API key for DeepL</string>
+    <string name="mtr_deepl_key_info">If you have an API key, you can use it. The program will access the DeepL server through the official API.</string>
 	<string name="mtr_create">Create</string>
 	<string name="mtr_hide_trans">Hide translated</string>
 	<string name="mtr_create_dict">Create dictionary</string>
